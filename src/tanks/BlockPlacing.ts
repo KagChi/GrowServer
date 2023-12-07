@@ -32,6 +32,8 @@ export function handleBlockPlacing(p: Arg): boolean {
         id: p.id
       });
 
+      tileUpdate(p.base, p.peer, p.actionType, p.block, p.world);
+
       return true;
       break;
     }
@@ -49,6 +51,8 @@ export function handleBlockPlacing(p: Arg): boolean {
         id: p.id
       });
 
+      tileUpdate(p.base, p.peer, p.actionType, p.block, p.world);
+
       return true;
       break;
     }
@@ -63,6 +67,8 @@ export function handleBlockPlacing(p: Arg): boolean {
         isBg: p.isBg,
         id: p.id
       });
+
+      tileUpdate(p.base, p.peer, p.actionType, p.block, p.world);
 
       return true;
       break;
