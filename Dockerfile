@@ -2,8 +2,7 @@ FROM ghcr.io/hazmi35/node:20-dev-alpine as build-stage
 
 RUN corepack enable && corepack prepare pnpm@latest
 
-COPY package*.json .
-COPY pnpm-lock.yaml .
+COPY . .
 
 RUN pnpm install --frozen-lockfile
 
