@@ -19,4 +19,4 @@ COPY --from=build-stage /tmp/build/pnpm-lock.yaml .
 COPY --from=build-stage /tmp/build/node_modules ./node_modules
 COPY --from=build-stage /tmp/build/dist ./dist
 
-CMD ["node", "dist/index.js"]
+CMD ["node", "dist/app.js"]
