@@ -57,7 +57,7 @@ export class BaseServer {
       this.#_loadCommands();
       this.#_loadDialogs();
       this.server.listen();
-      WebServer(this.log, this.database);
+      // WebServer(this.log, this.database);
     });
   }
 
