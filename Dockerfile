@@ -14,9 +14,6 @@ RUN pnpm prune --production
 
 FROM ghcr.io/hazmi35/node:20-alpine
 
-COPY --from=build-stage /tmp/build/package.json .
-COPY --from=build-stage /tmp/build/pnpm-lock.yaml .
-COPY --from=build-stage /tmp/build/node_modules ./node_modules
-COPY --from=build-stage /tmp/build/dist ./dist
+COPY --from=build-stage /tmp/build/. .
 
 CMD ["node", "dist/app.js"]
