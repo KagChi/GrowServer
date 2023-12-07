@@ -31,7 +31,7 @@ export class BaseServer {
   public database;
 
   constructor() {
-    this.server = new Client({ https: { enable: false } });
+    this.server = new Client({ enet: { ip: process.env.ADDRESS }, https: { enable: false } });
     this.items = {
       hash: `${hashItemsDat(fs.readFileSync("./assets/dat/items.dat"))}`,
       content: fs.readFileSync("./assets/dat/items.dat"),
